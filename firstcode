@@ -1,0 +1,120 @@
+def HantoNum():
+    if  s[3]=='零':
+            return 0
+    elif s[3] == '一':
+            return 1
+    elif s[3] == '二':
+            return 2
+    elif s[3]== '三':
+            return 3
+    elif s[3] == '四':
+            return 4
+    elif s[3]== '五':
+             return 5
+    elif  s[3]== '六':
+            return 6
+    elif s[3] == '七':
+            return 7
+    elif s[3] == '八':
+            return 8
+    elif s[3]== '九':
+             return 9
+    elif b[2]=='零':
+        return 0
+    elif b[2] == '一':
+        return 1
+    elif b[2] == '二':
+        return 2
+    elif b[2] == '三':
+        return 3
+    elif b[2]== '四':
+        return 4
+    elif b[2] == '五':
+        return 5
+    elif b[2]== '六':
+        return 6
+    elif b[2] == '七':
+        return 7
+    elif b[2] == '八':
+        return 8
+    elif b[2] == '九':
+        return 9
+    elif s[1] == 0:
+        return '零'
+    elif s[1] == 1:
+        return '一'
+    elif s[1] == 2:
+        return '二'
+    elif s[1] == 3:
+        return'三'
+    elif s[1] == 4:
+        return '四'
+    elif s[1] == 5:
+        return '五'
+    elif s[1] == 6:
+        return'六'
+    elif s[1] == 7:
+        return '七'
+    elif s[1] == 8:
+        return '八'
+    elif s[1] == 9:
+        return '九'
+    elif s[1] == 10:
+        return '十'
+    else:
+        return 'error'
+
+s=input("")
+s=s.split()
+s[3]=HantoNum()
+s[1]=s[3]
+b = input("")
+b = b.split()
+b[2]=HantoNum()
+if b[1] == "增加":
+    s[1] = s[1] + b[2]
+elif b[1] == "减少":
+    s[1] = s[1] - b[2]
+c=input("")
+c=c.split()
+
+
+def NumtoHan():
+    if d[3] == '零':
+        return 0
+    elif d[3] == '一':
+        return 1
+    elif d[3] == '二':
+        return 2
+    elif d[3]== '三':
+        return 3
+    elif d[3] == '四':
+        return 4
+    elif d[3] == '五':
+        return 5
+    elif d[3] == '六':
+        return 6
+    elif d[3] == '七':
+        return 7
+    elif d[3] == '八':
+        return 8
+    elif d[3] == '九':
+        return 9
+    elif d[3] == '十':
+        return 10
+    else:
+        return "error"
+
+
+d = input("")
+d = d.split()
+d[3]=NumtoHan()
+if d[0]=="如果":
+    if d[2] == "大于":
+        if s[1]>d[3]:
+            print("“你好，世界”")
+        else:
+            print("冻死我了")
+if c[0]=="看看":
+    s[1]=HantoNum()
+    print(s[1])
