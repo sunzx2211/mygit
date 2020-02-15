@@ -1,0 +1,130 @@
+def HantoNum():
+    if  s[3]=='零':
+            return 0
+    elif s[3] == '一':
+            return 1
+    elif s[3] == '二':
+            return 2
+    elif s[3]== '三':
+            return 3
+    elif s[3] == '四':
+            return 4
+    elif s[3]== '五':
+             return 5
+    elif  s[3]== '六':
+            return 6
+    elif s[3] == '七':
+            return 7
+    elif s[3] == '八':
+            return 8
+    elif s[3]== '九':
+             return 9
+    elif s[3]== '十':
+        return 10
+    elif b[2]=='零':
+        return 0
+    elif b[2] == '一':
+        return 1
+    elif b[2] == '二':
+        return 2
+    elif b[2] == '三':
+        return 3
+    elif b[2]== '四':
+        return 4
+    elif b[2] == '五':
+        return 5
+    elif b[2]== '六':
+        return 6
+    elif b[2] == '七':
+        return 7
+    elif b[2] == '八':
+        return 8
+    elif b[2] == '九':
+        return 9
+    elif b[2] == '十':
+        return 10
+    elif wendu[3]=='零':
+        return 0
+    elif wendu[3] == '一':
+        return 1
+    elif wendu[3] == '二':
+        return 2
+    elif wendu[3] == '三':
+        return 3
+    elif wendu[3]== '四':
+        return 4
+    elif wendu[3] == '五':
+        return 5
+    elif wendu[3]== '六':
+        return 6
+    elif wendu[3] == '七':
+        return 7
+    elif wendu[3] == '八':
+        return 8
+    elif wendu[3] == '九':
+        return 9
+    elif wendu[3] == '十':
+        return 10
+
+
+def NumtoHan():
+    if wendu[2] == 0:
+        return '零'
+    elif wendu[2] == 1:
+        return '一'
+    elif wendu[2] == 2:
+        return '二'
+    elif wendu[2]== 3:
+        return '三'
+    elif wendu[2] == 4:
+        return '四'
+    elif wendu[2] == 5:
+        return '五'
+    elif wendu[2] == 6:
+        return '六'
+    elif wendu[2] == 7:
+        return '七'
+    elif wendu[2] == 8:
+        return '八'
+    elif wendu[2] == 9:
+        return '九'
+    elif wendu[2] == 10:
+        return '十'
+    else:
+        return "error"
+
+s = input()
+s = s.split()
+wendu = ['','','','']
+wendu2 = ['','']
+
+if s[0] == "整数":
+    s[3] = HantoNum()
+    wendu[0] = s[3]
+
+b = input()
+b = b.split()
+
+if b[0] == "气温":
+    b[2] = HantoNum()
+    wendu[1] = b[2]
+    if b[1] == "减少":
+        wendu[2] = wendu[0] - wendu[1]
+    else: wendu[2] = wendu[0] + wendu[1]
+
+c = input()
+c = c.split()
+wendu2[0] = wendu[2] #暂时存放最终气温
+
+if c[0] == "看看":
+    wendu[2] = NumtoHan()
+    print(wendu[2])
+
+d = input()
+d = d.split()
+wendu[3] = d[3]
+wendu[3] = HantoNum()
+
+if d[0] == "如果" and d[2] == "大于" and wendu2[0] > wendu[3]:
+    print(d[6])
+else: print(d[-1])
